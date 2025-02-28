@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+</head>
+<body>
+<div style="text-align:center">
+
+    <h1>Enter Your Information</h1>
+
+    <form  method="post" action="{% url 'save_employee_page' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="place">Place:</label><br>
+        <input type="text" id="place" name="place" required><br><br>
+
+
+
+        <input type="submit" value="Submit">
+
+
+
+       <br><br>  <div>
+            <button >
+                <a href="{% url 'display_page' %}">display</a>
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
